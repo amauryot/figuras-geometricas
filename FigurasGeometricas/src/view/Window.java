@@ -2,7 +2,11 @@ package view;
 
 import java.util.ArrayList;
 
+import javax.swing.JMenuItem;
+
+import controller.Controller;
 import view.frame.Frame;
+import view.frame.MenuItem;
 import view.panel.Panel;
 import view.panel.PanelMain;
 import view.panel.figure.circle.PanelCircle;
@@ -33,13 +37,25 @@ public class Window {
 		setPanel(panelMenuMain);
 	}
 
+	public JMenuItem getMenuItem(MenuItem menuItem) {
+		return frame.menuItemList().get(menuItem.index());
+	}
+	
 	public void setPanel(Panel panel) {
 		panelList.forEach(pnl -> pnl.setVisible(false));
 		panel.setVisible(true);
 	}
 	
+	public void addController(Controller controller) {
+		frame.menuItemList().forEach(menuItem -> menuItem.addActionListener(controller));
+	}
+	
 	public void show() {
 		frame.setVisible(true);
+	}
+	
+	public void close() {
+		frame.dispose();
 	}
 	
 	private void initialize() {
