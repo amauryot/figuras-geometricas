@@ -11,7 +11,7 @@ import view.subpanel.data.SubPanelData;
 public class SubPanelDataCircle extends SubPanelData {
 
 	private static final long serialVersionUID = -3353847360712662786L;
-
+	
 	public SubPanelDataCircle() {
 		super();
 		initialize();
@@ -41,6 +41,7 @@ public class SubPanelDataCircle extends SubPanelData {
 			JTextField textField = new JTextField();
 			textField.setBounds(textFieldEnum.x(), textFieldEnum.y(), textFieldEnum.width(), textFieldEnum.height());
 			this.add(textField);
+			textFieldList.add(textField);
 		}
 	}
 }

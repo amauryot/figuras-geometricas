@@ -22,6 +22,7 @@ public class PanelMenuQuadrilaterals extends PanelMenu {
 		return subPanelButtonsQuadrilaterals.buttonList().get(button.index());
 	}
 	
+	@Override
 	public void addController (Controller controller) {
 		subPanelButtonsQuadrilaterals.buttonList().forEach(button -> button.addActionListener(controller));
 	}

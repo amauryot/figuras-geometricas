@@ -7,6 +7,7 @@ import view.subpanel.buttons.Button;
 import view.subpanel.buttons.SubPanelButtons;
 import view.subpanel.image.SubPanelImage;
 import view.subpanel.result.SubPanelResult;
+import view.subpanel.result.TextFieldResult;
 
 public abstract class PanelGeometricFigure extends PanelAbstract {
 
@@ -25,6 +26,16 @@ public abstract class PanelGeometricFigure extends PanelAbstract {
 		return subPanelButtons.buttonList().get(button.index());
 	}
 	
+	public void clear() {
+		subPanelResult.textFieldList().forEach(textField -> textField.setText(""));
+	}
+	
+	public void setResults(String perimeter, String area) {
+		subPanelResult.textFieldList().get(TextFieldResult.PERIMETER.index()).setText(perimeter);
+		subPanelResult.textFieldList().get(TextFieldResult.AREA.index()).setText(area);
+	}
+	
+	@Override
 	public void addController (Controller controller) {
 		subPanelButtons.buttonList().forEach(button -> button.addActionListener(controller));
 	}

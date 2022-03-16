@@ -15,6 +15,16 @@ public class PanelTriangle extends PanelGeometricFigure {
 		initialize();
 	}
 	
+	public String getValueOf(TextFieldTriangle textField) {
+		return subPanelData.textFieldList().get(textField.index()).getText();
+	}
+	
+	@Override
+	public void clear() {
+		super.clear();
+		subPanelData.textFieldList().forEach(textField -> textField.setText(""));
+	}
+	
 	private void initialize() {
 		subPanelData = new SubPanelDataTriangle();
 		this.add(subPanelData);

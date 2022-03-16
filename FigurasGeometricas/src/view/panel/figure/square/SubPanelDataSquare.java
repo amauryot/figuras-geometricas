@@ -41,6 +41,7 @@ public class SubPanelDataSquare extends SubPanelData {
 			JTextField textField = new JTextField();
 			textField.setBounds(textFieldEnum.x(), textFieldEnum.y(), textFieldEnum.width(), textFieldEnum.height());
 			this.add(textField);
+			textFieldList.add(textField);
 		}
 	}
 }

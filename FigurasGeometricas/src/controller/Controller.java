@@ -3,10 +3,22 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import model.Circle;
+import model.Rectangle;
+import model.Rhombus;
+import model.Square;
+import model.Trapezoid;
+import model.Triangle;
 import view.OptionPane;
 import view.Window;
 import view.frame.MenuItem;
 import view.panel.Panel;
+import view.panel.figure.circle.TextFieldCircle;
+import view.panel.figure.rectangle.TextFieldRectangle;
+import view.panel.figure.rhombus.TextFieldRhombus;
+import view.panel.figure.square.TextFieldSquare;
+import view.panel.figure.trapezoid.TextFieldTrapezoid;
+import view.panel.figure.triangle.TextFieldTriangle;
 import view.panel.menu.main.ButtonMain;
 import view.panel.menu.quadrilaterals.ButtonQuadrilaterals;
 import view.subpanel.buttons.Button;
@@ -91,12 +103,20 @@ public class Controller implements ActionListener {
 		// ============================== CIRCLE ===============================
 		
 		if (event.getSource() == window.getMenuCircle().getButton(Button.CALCULATE)) {
-			// TODO
+			double radius = Double.parseDouble(window.getMenuCircle().getValueOf(TextFieldCircle.RADIUS));
+			
+			Circle circle = new Circle(radius);
+			
+			String perimeter = String.format("%.4f", circle.getPerimeter());
+			String area = String.format("%.4f", circle.getArea());
+			
+			window.getMenuCircle().setResults(perimeter, area);
+			
 			return;
 		}
 		
 		if (event.getSource() == window.getMenuCircle().getButton(Button.CLEAR)) {
-			// TODO
+			window.getMenuCircle().clear();
 			return;
 		}
 		
@@ -108,12 +128,23 @@ public class Controller implements ActionListener {
 		// ============================= TRIANGLE ==============================
 		
 		if (event.getSource() == window.getMenuTriangle().getButton(Button.CALCULATE)) {
-			// TODO
+			double base = Double.parseDouble(window.getMenuTriangle().getValueOf(TextFieldTriangle.BASE));
+			double side1 = Double.parseDouble(window.getMenuTriangle().getValueOf(TextFieldTriangle.SIDE1));
+			double side2 = Double.parseDouble(window.getMenuTriangle().getValueOf(TextFieldTriangle.SIDE2));
+			double height = Double.parseDouble(window.getMenuTriangle().getValueOf(TextFieldTriangle.HEIGHT));
+			
+			Triangle triangle = new Triangle(base, side1, side2, height);
+			
+			String perimeter = String.format("%.4f", triangle.getPerimeter());
+			String area = String.format("%.4f", triangle.getArea());
+			
+			window.getMenuTriangle().setResults(perimeter, area);
+			
 			return;
 		}
 		
 		if (event.getSource() == window.getMenuTriangle().getButton(Button.CLEAR)) {
-			// TODO
+			window.getMenuTriangle().clear();
 			return;
 		}
 		
@@ -125,12 +156,22 @@ public class Controller implements ActionListener {
 		// ============================== RHOMBUS ==============================
 		
 		if (event.getSource() == window.getMenuRhombus().getButton(Button.CALCULATE)) {
-			// TODO
+			double majorDiagonal = Double.parseDouble(window.getMenuRhombus().getValueOf(TextFieldRhombus.MAJOR_DIAGONAL));
+			double minorDiagonal = Double.parseDouble(window.getMenuRhombus().getValueOf(TextFieldRhombus.MINOR_DIAGONAL));
+			double side = Double.parseDouble(window.getMenuRhombus().getValueOf(TextFieldRhombus.SIDE));
+			
+			Rhombus rhombus = new Rhombus(majorDiagonal, minorDiagonal, side);
+			
+			String perimeter = String.format("%.4f", rhombus.getPerimeter());
+			String area = String.format("%.4f", rhombus.getArea());
+			
+			window.getMenuRhombus().setResults(perimeter, area);
+			
 			return;
 		}
 		
 		if (event.getSource() == window.getMenuRhombus().getButton(Button.CLEAR)) {
-			// TODO
+			window.getMenuRhombus().clear();
 			return;
 		}
 		
@@ -143,12 +184,20 @@ public class Controller implements ActionListener {
 		
 		
 		if (event.getSource() == window.getMenuSquare().getButton(Button.CALCULATE)) {
-			// TODO
+			double side = Double.parseDouble(window.getMenuSquare().getValueOf(TextFieldSquare.SIDE));
+			
+			Square square = new Square(side);
+			
+			String perimeter = String.format("%.4f", square.getPerimeter());
+			String area = String.format("%.4f", square.getArea());
+			
+			window.getMenuSquare().setResults(perimeter, area);
+			
 			return;
 		}
 		
 		if (event.getSource() == window.getMenuSquare().getButton(Button.CLEAR)) {
-			// TODO
+			window.getMenuSquare().clear();
 			return;
 		}
 		
@@ -160,12 +209,21 @@ public class Controller implements ActionListener {
 		// ============================= RECTANGLE =============================
 		
 		if (event.getSource() == window.getMenuRectangle().getButton(Button.CALCULATE)) {
-			// TODO
+			double base = Double.parseDouble(window.getMenuRectangle().getValueOf(TextFieldRectangle.BASE));
+			double height = Double.parseDouble(window.getMenuRectangle().getValueOf(TextFieldRectangle.HEIGHT));
+			
+			Rectangle rectangle = new Rectangle(base, height);
+			
+			String perimeter = String.format("%.4f", rectangle.getPerimeter());
+			String area = String.format("%.4f", rectangle.getArea());
+			
+			window.getMenuRectangle().setResults(perimeter, area);
+			
 			return;
 		}
 		
 		if (event.getSource() == window.getMenuRectangle().getButton(Button.CLEAR)) {
-			// TODO
+			window.getMenuRectangle().clear();
 			return;
 		}
 		
@@ -177,12 +235,24 @@ public class Controller implements ActionListener {
 		// ============================= TRAPEZOID =============================
 		
 		if (event.getSource() == window.getMenuTrapezoid().getButton(Button.CALCULATE)) {
-			// TODO
+			double side1 = Double.parseDouble(window.getMenuTrapezoid().getValueOf(TextFieldTrapezoid.SIDE1));
+			double side2 = Double.parseDouble(window.getMenuTrapezoid().getValueOf(TextFieldTrapezoid.SIDE2));
+			double majorBase = Double.parseDouble(window.getMenuTrapezoid().getValueOf(TextFieldTrapezoid.MAJOR_BASE));
+			double minorBase = Double.parseDouble(window.getMenuTrapezoid().getValueOf(TextFieldTrapezoid.MINOR_BASE));
+			double height = Double.parseDouble(window.getMenuTrapezoid().getValueOf(TextFieldTrapezoid.HEIGHT));
+			
+			Trapezoid trapezoid = new Trapezoid(side1, side2, majorBase, minorBase, height);
+			
+			String perimeter = String.format("%.4f", trapezoid.getPerimeter());
+			String area = String.format("%.4f", trapezoid.getArea());
+			
+			window.getMenuTrapezoid().setResults(perimeter, area);
+			
 			return;
 		}
 		
 		if (event.getSource() == window.getMenuTrapezoid().getButton(Button.CLEAR)) {
-			// TODO
+			window.getMenuTrapezoid().clear();
 			return;
 		}
 		

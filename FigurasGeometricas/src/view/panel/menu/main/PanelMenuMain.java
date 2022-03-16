@@ -22,6 +22,7 @@ public class PanelMenuMain extends PanelMenu {
 		return subPanelButtonsMain.buttonList().get(button.index());
 	}
 	
+	@Override
 	public void addController (Controller controller) {
 		subPanelButtonsMain.buttonList().forEach(button -> button.addActionListener(controller));
 	}

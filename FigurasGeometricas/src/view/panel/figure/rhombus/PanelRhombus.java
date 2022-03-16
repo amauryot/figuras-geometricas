@@ -15,6 +15,16 @@ public class PanelRhombus extends PanelGeometricFigure {
 		initialize();
 	}
 	
+	public String getValueOf(TextFieldRhombus textField) {
+		return subPanelData.textFieldList().get(textField.index()).getText();
+	}
+	
+	@Override
+	public void clear() {
+		super.clear();
+		subPanelData.textFieldList().forEach(textField -> textField.setText(""));
+	}
+	
 	private void initialize() {
 		subPanelData = new SubPanelDataRhombus();
 		this.add(subPanelData);
