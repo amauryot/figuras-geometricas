@@ -8,6 +8,7 @@ import controller.Controller;
 import view.frame.Frame;
 import view.frame.MenuItem;
 import view.panel.Panel;
+import view.panel.PanelAbstract;
 import view.panel.PanelMain;
 import view.panel.figure.circle.PanelCircle;
 import view.panel.figure.rectangle.PanelRectangle;
@@ -30,24 +31,57 @@ public class Window {
 	private PanelSquare panelSquare;
 	private PanelRectangle panelRectangle;
 	private PanelTrapezoid panelTrapezoid;
-	private ArrayList<Panel> panelList;
+	private ArrayList<PanelAbstract> panelList;
 	
 	public Window() {
 		initialize();
-		setPanel(panelMenuMain);
+		setPanel(Panel.MENU_MAIN);
 	}
 
 	public JMenuItem getMenuItem(MenuItem menuItem) {
 		return frame.menuItemList().get(menuItem.index());
 	}
 	
-	public void setPanel(Panel panel) {
-		panelList.forEach(pnl -> pnl.setVisible(false));
-		panel.setVisible(true);
+	public PanelMenuMain getMenuMain() {
+		return panelMenuMain;
+	}
+	
+	public PanelMenuQuadrilaterals getMenuQuadrilaterals() {
+		return panelMenuQuadrilaterals;
+	}
+	
+	public PanelCircle getMenuCircle() {
+		return panelCircle;
+	}
+	
+	public PanelTriangle getMenuTriangle() {
+		return panelTriangle;
+	}
+	
+	public PanelRhombus getMenuRhombus() {
+		return panelRhombus;
+	}
+	
+	public PanelSquare getMenuSquare() {
+		return panelSquare;
+	}
+	
+	public PanelRectangle getMenuRectangle() {
+		return panelRectangle;
+	}
+	
+	public PanelTrapezoid getMenuTrapezoid() {
+		return panelTrapezoid;
+	}
+	
+	public void setPanel(Panel panelEnum) {
+		panelList.forEach(panel -> panel.setVisible(false));
+		panelList.get(panelEnum.index()).setVisible(true);
 	}
 	
 	public void addController(Controller controller) {
 		frame.menuItemList().forEach(menuItem -> menuItem.addActionListener(controller));
+		panelList.forEach(panel -> panel.addController(controller));
 	}
 	
 	public void show() {
@@ -64,7 +98,7 @@ public class Window {
 		panelMain = new PanelMain();
 		frame.getContentPane().add(panelMain);
 		
-		panelList = new ArrayList<Panel>();
+		panelList = new ArrayList<PanelAbstract>();
 		
 		panelMenuMain = new PanelMenuMain();
 		panelMain.add(panelMenuMain);

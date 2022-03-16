@@ -1,5 +1,8 @@
 package view.panel.menu.quadrilaterals;
 
+import javax.swing.JButton;
+
+import controller.Controller;
 import view.panel.PanelMenu;
 
 public class PanelMenuQuadrilaterals extends PanelMenu {
@@ -13,6 +16,14 @@ public class PanelMenuQuadrilaterals extends PanelMenu {
 	public PanelMenuQuadrilaterals() {
 		super(IMAGE_FILE);
 		initialize();
+	}
+	
+	public JButton getButton(ButtonQuadrilaterals button) {
+		return subPanelButtonsQuadrilaterals.buttonList().get(button.index());
+	}
+	
+	public void addController (Controller controller) {
+		subPanelButtonsQuadrilaterals.buttonList().forEach(button -> button.addActionListener(controller));
 	}
 	
 	private void initialize() {

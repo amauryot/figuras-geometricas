@@ -2,7 +2,7 @@ package view.panel;
 
 import view.subpanel.image.SubPanelImage;
 
-public abstract class PanelMenu extends Panel {
+public abstract class PanelMenu extends PanelAbstract {
 
 	private static final long serialVersionUID = -7322054640021398469L;
 	
