@@ -3,6 +3,7 @@ package controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import controller.exception.InvalidGeometricFigureException;
 import model.Audio;
 import model.Circle;
 import model.Rectangle;
@@ -111,6 +112,8 @@ public class Controller implements ActionListener {
 				
 				Circle circle = new Circle(radius);
 				
+				if (!circle.isValid()) throw new InvalidGeometricFigureException();
+				
 				String perimeter = String.format("%.4f", circle.getPerimeter());
 				String area = String.format("%.4f", circle.getArea());
 				
@@ -119,6 +122,10 @@ public class Controller implements ActionListener {
 			} catch (NumberFormatException exception) {
 				errorSound.play();
 				optionPane.showMessageNumberFormatException();
+				
+			} catch (InvalidGeometricFigureException exception) {
+				errorSound.play();
+				optionPane.showMessageInvalidCircleException();
 			}
 			return;
 		}
@@ -144,6 +151,8 @@ public class Controller implements ActionListener {
 				
 				Triangle triangle = new Triangle(base, side1, side2, height);
 				
+				if (!triangle.isValid()) throw new InvalidGeometricFigureException();
+				
 				String perimeter = String.format("%.4f", triangle.getPerimeter());
 				String area = String.format("%.4f", triangle.getArea());
 				
@@ -152,6 +161,10 @@ public class Controller implements ActionListener {
 			} catch (NumberFormatException exception) {
 				errorSound.play();
 				optionPane.showMessageNumberFormatException();
+				
+			} catch (InvalidGeometricFigureException exception) {
+				errorSound.play();
+				optionPane.showMessageInvalidTriangleException();
 			}
 			return;
 		}
@@ -176,6 +189,8 @@ public class Controller implements ActionListener {
 				
 				Rhombus rhombus = new Rhombus(majorDiagonal, minorDiagonal, side);
 				
+				if (!rhombus.isValid()) throw new InvalidGeometricFigureException();
+				
 				String perimeter = String.format("%.4f", rhombus.getPerimeter());
 				String area = String.format("%.4f", rhombus.getArea());
 				
@@ -184,6 +199,10 @@ public class Controller implements ActionListener {
 			} catch (NumberFormatException exception) {
 				errorSound.play();
 				optionPane.showMessageNumberFormatException();
+				
+			} catch (InvalidGeometricFigureException exception) {
+				errorSound.play();
+				optionPane.showMessageInvalidRhombusException();
 			}
 			return;
 		}
@@ -207,6 +226,8 @@ public class Controller implements ActionListener {
 				
 				Square square = new Square(side);
 				
+				if (!square.isValid()) throw new InvalidGeometricFigureException();
+				
 				String perimeter = String.format("%.4f", square.getPerimeter());
 				String area = String.format("%.4f", square.getArea());
 				
@@ -215,6 +236,10 @@ public class Controller implements ActionListener {
 			} catch (NumberFormatException exception) {
 				errorSound.play();
 				optionPane.showMessageNumberFormatException();
+				
+			} catch (InvalidGeometricFigureException exception) {
+				errorSound.play();
+				optionPane.showMessageInvalidSquareException();
 			}
 			return;
 		}
@@ -238,6 +263,8 @@ public class Controller implements ActionListener {
 				
 				Rectangle rectangle = new Rectangle(base, height);
 				
+				if (!rectangle.isValid()) throw new InvalidGeometricFigureException();
+				
 				String perimeter = String.format("%.4f", rectangle.getPerimeter());
 				String area = String.format("%.4f", rectangle.getArea());
 				
@@ -246,6 +273,10 @@ public class Controller implements ActionListener {
 			} catch (NumberFormatException exception) {
 				errorSound.play();
 				optionPane.showMessageNumberFormatException();
+				
+			} catch (InvalidGeometricFigureException exception) {
+				errorSound.play();
+				optionPane.showMessageInvalidRectangleException();
 			}
 			return;
 		}
@@ -272,6 +303,8 @@ public class Controller implements ActionListener {
 				
 				Trapezoid trapezoid = new Trapezoid(side1, side2, majorBase, minorBase, height);
 				
+				if (!trapezoid.isValid()) throw new InvalidGeometricFigureException();
+				
 				String perimeter = String.format("%.4f", trapezoid.getPerimeter());
 				String area = String.format("%.4f", trapezoid.getArea());
 				
@@ -280,6 +313,10 @@ public class Controller implements ActionListener {
 			} catch (NumberFormatException exception) {
 				errorSound.play();
 				optionPane.showMessageNumberFormatException();
+				
+			} catch (InvalidGeometricFigureException exception) {
+				errorSound.play();
+				optionPane.showMessageInvalidTrapezoidException();
 			}
 			return;
 		}

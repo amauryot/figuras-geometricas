@@ -8,6 +8,10 @@ public class Circle implements GeometricFigure {
 		this.radius = radius;
 	}
 	
+	public boolean isValid() {
+		return (radius > 0);
+	}
+	
 	@Override
 	public double getPerimeter() {
 		return 2 * Math.PI * radius; // P = 2πr

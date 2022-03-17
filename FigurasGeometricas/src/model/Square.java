@@ -6,6 +6,10 @@ public class Square extends Quadrilateral implements GeometricFigure {
 		super(side, side, side, side);
 	}
 
+	public boolean isValid() {
+		return (super.side1() > 0);
+	}
+	
 	@Override
 	public double getPerimeter() {
 		return 4 * super.side1(); // P = 4l

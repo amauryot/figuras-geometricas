@@ -14,6 +14,14 @@ public class Triangle implements GeometricFigure {
 		this.height = height;
 	}
 	
+	private double condition() {
+		return Math.sqrt((side1*side1) - (height*height)) + Math.sqrt((side2*side2) - (height*height)); // √(l1² - h²) + √(l2² - h²)
+	}
+	
+	public boolean isValid() {
+		return (Math.abs(base - condition()) < 0.1); // b ~ √(l1² - h²) + √(l2² - h²)
+	}
+	
 	@Override
 	public double getPerimeter() {
 		return base + side1 + side2; // P = b + l1 + l2
