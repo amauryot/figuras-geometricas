@@ -3,8 +3,8 @@ package view.subpanel.buttons;
 public enum Button {
 
 	CALCULATE(0, "Calcular"),
-	CLEAR(1, "Limpar"),
-	RETURN(2, "Voltar");
+	CLEAR    (1, "Limpar"  ),
+	RETURN   (2, "Voltar"  );
 	
 	private int index;
 	private String title;

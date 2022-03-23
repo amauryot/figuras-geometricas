@@ -2,10 +2,10 @@ package view.panel.menu.main;
 
 public enum ButtonMain {
 
-	CIRCLE(0, "Círculo"),
-	TRIANGLE(1, "Triângulo"),
+	CIRCLE        (0, "Círculo"      ),
+	TRIANGLE      (1, "Triângulo"    ),
 	QUADRILATERALS(2, "Quadriláteros"),
-	EXIT(3, "Sair");
+	EXIT          (3, "Sair"         );
 	
 	private int index;
 	private String title;

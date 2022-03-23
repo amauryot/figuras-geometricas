@@ -2,9 +2,9 @@ package view.panel.figure.rhombus;
 
 public enum LabelRhombus {
 
-	MAJOR_DIAGONAL(10, 20, 120, 25, "Diagonal Maior:"),
-	MINOR_DIAGONAL(10, 70, 120, 25, "Diagonal Menor:"),
-	SIDE(230, 20, 40, 25, "Lado:");
+	MAJOR_DIAGONAL(10,  20, 120, 25, "Diagonal Maior:"),
+	MINOR_DIAGONAL(10,  70, 120, 25, "Diagonal Menor:"),
+	SIDE          (230, 20, 40,  25, "Lado:"          );
 	
 	private int x;
 	private int y;

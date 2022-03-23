@@ -15,7 +15,8 @@ public class Triangle implements GeometricFigure {
 	}
 	
 	private double condition() {
-		return Math.sqrt((side1*side1) - (height*height)) + Math.sqrt((side2*side2) - (height*height)); // √(l1² - h²) + √(l2² - h²)
+		return Math.sqrt((side1*side1) - (height*height)) +
+			   Math.sqrt((side2*side2) - (height*height)); // √(l1² - h²) + √(l2² - h²)
 	}
 	
 	public boolean isValid() {

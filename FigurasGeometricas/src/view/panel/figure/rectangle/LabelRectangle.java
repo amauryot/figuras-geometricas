@@ -2,7 +2,7 @@ package view.panel.figure.rectangle;
 
 public enum LabelRectangle {
 
-	BASE(30, 45, 40, 25, "Base:"),
+	BASE  (30,  45, 40, 25, "Base:"  ),
 	HEIGHT(200, 45, 50, 25, "Altura:");
 	
 	private int x;

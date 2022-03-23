@@ -9,9 +9,9 @@ public abstract class PanelAbstract extends JPanel {
 
 	private static final long serialVersionUID = -7322054640021398469L;
 
-	private final int PANEL_X = 0;
-	private final int PANEL_Y = 0;
-	private final int PANEL_WIDTH = 370;
+	private final int PANEL_X      = 0;
+	private final int PANEL_Y      = 0;
+	private final int PANEL_WIDTH  = 370;
 	private final int PANEL_HEIGHT = 515;
 	
 	public PanelAbstract() {

@@ -2,7 +2,7 @@ package view.panel.figure.rectangle;
 
 public enum TextFieldRectangle {
 
-	BASE(0, 80, 45, 60, 25),
+	BASE  (0, 80,  45, 60, 25),
 	HEIGHT(1, 260, 45, 60, 25);
 	
 	private int index;

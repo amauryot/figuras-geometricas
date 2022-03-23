@@ -10,9 +10,9 @@ public class SubPanelImage extends JPanel {
 
 	private static final long serialVersionUID = 1304328439944661736L;
 	
-	private final int SUBPANEL_X = 30;
-	private final int SUBPANEL_Y = 15;
-	private final int SUBPANEL_WIDTH = 310;
+	private final int SUBPANEL_X      = 30;
+	private final int SUBPANEL_Y      = 15;
+	private final int SUBPANEL_WIDTH  = 310;
 	private final int SUBPANEL_HEIGHT = 210;
 	
 	public SubPanelImage(String imageFile) {

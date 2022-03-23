@@ -12,9 +12,9 @@ public class SubPanelResult extends JPanel {
 
 	private static final long serialVersionUID = 911816333841499540L;
 
-	private final int SUBPANEL_X = 10;
-	private final int SUBPANEL_Y = 365;
-	private final int SUBPANEL_WIDTH = 350;
+	private final int SUBPANEL_X      = 10;
+	private final int SUBPANEL_Y      = 365;
+	private final int SUBPANEL_WIDTH  = 350;
 	private final int SUBPANEL_HEIGHT = 80;
 	
 	private ArrayList<JTextField> textFieldList;

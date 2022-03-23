@@ -10,9 +10,9 @@ public abstract class SubPanelData extends JPanel {
 
 	private static final long serialVersionUID = -3335304333429302459L;
 
-	private final int SUBPANEL_X = 10;
-	private final int SUBPANEL_Y = 240;
-	private final int SUBPANEL_WIDTH = 350;
+	private final int SUBPANEL_X      = 10;
+	private final int SUBPANEL_Y      = 240;
+	private final int SUBPANEL_WIDTH  = 350;
 	private final int SUBPANEL_HEIGHT = 115;
 	
 	protected ArrayList<JTextField> textFieldList;

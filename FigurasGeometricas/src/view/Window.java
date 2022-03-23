@@ -31,6 +31,7 @@ public class Window {
 	private PanelSquare panelSquare;
 	private PanelRectangle panelRectangle;
 	private PanelTrapezoid panelTrapezoid;
+	
 	private ArrayList<PanelAbstract> panelList;
 	
 	public Window() {

@@ -3,7 +3,7 @@ package view.subpanel.result;
 public enum TextFieldResult {
 
 	PERIMETER(0, 185, 10, 70, 25),
-	AREA(1, 185, 45, 70, 25);
+	AREA     (1, 185, 45, 70, 25);
 	
 	private int index;
 	private int x;

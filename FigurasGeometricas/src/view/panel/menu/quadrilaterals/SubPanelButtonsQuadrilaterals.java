@@ -15,10 +15,11 @@ public class SubPanelButtonsQuadrilaterals extends JPanel {
 	private final int GRID_ROWS = 5;
 	private final int GRID_COLS = 1;
 	private final int GRID_HGAP = 0;
-	private final int GRID_VGAP= 20;
-	private final int SUBPANEL_X = 135;
-	private final int SUBPANEL_Y = 260;
-	private final int SUBPANEL_WIDTH = 100;
+	private final int GRID_VGAP = 20;
+	
+	private final int SUBPANEL_X      = 135;
+	private final int SUBPANEL_Y      = 260;
+	private final int SUBPANEL_WIDTH  = 100;
 	private final int SUBPANEL_HEIGHT = 230;
 	
 	private ArrayList<JButton> buttonList;

@@ -2,10 +2,10 @@ package view.panel.figure.triangle;
 
 public enum TextFieldTriangle {
 
-	BASE(0, 80, 20, 60, 25),
-	HEIGHT(1, 80, 70, 60, 25),
-	SIDE1(2, 270, 20, 60, 25),
-	SIDE2(3, 270, 70, 60, 25);
+	BASE  (0, 80,  20, 60, 25),
+	HEIGHT(1, 80,  70, 60, 25),
+	SIDE1 (2, 270, 20, 60, 25),
+	SIDE2 (3, 270, 70, 60, 25);
 	
 	private int index;
 	private int x;

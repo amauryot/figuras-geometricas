@@ -2,10 +2,10 @@ package view.panel.figure.triangle;
 
 public enum LabelTriangle {
 
-	BASE(20, 20, 50, 25, "Base:"),
-	HEIGHT(20, 70, 50, 25, "Altura:"),
-	SIDE1(205, 20, 55, 25, "Lado 1:"),
-	SIDE2(205, 70, 55, 25, "Lado 2:");
+	BASE  (20,  20, 50, 25, "Base:"  ),
+	HEIGHT(20,  70, 50, 25, "Altura:"),
+	SIDE1 (205, 20, 55, 25, "Lado 1:"),
+	SIDE2 (205, 70, 55, 25, "Lado 2:");
 	
 	private int x;
 	private int y;

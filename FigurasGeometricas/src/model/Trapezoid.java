@@ -10,7 +10,8 @@ public class Trapezoid extends Quadrilateral implements GeometricFigure {
 	}
 
 	private double condition() {
-		return Math.sqrt((super.side1()*super.side1()) - (height*height)) + Math.sqrt((super.side2()*super.side2()) - (height*height)) + super.side4(); // √(l1² - h²) + √(l2² - h²) + b
+		return Math.sqrt((super.side1()*super.side1()) - (height*height)) +
+			   Math.sqrt((super.side2()*super.side2()) - (height*height)) + super.side4(); // √(l1² - h²) + √(l2² - h²) + b
 	}
 	
 	public boolean isValid() {

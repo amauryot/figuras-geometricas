@@ -3,7 +3,7 @@ package view.subpanel.result;
 public enum LabelResult {
 
 	PERIMETER(95, 10, 80, 25, "Perímetro"),
-	AREA(95, 45, 80, 25, "Área");
+	AREA     (95, 45, 80, 25, "Área"     );
 	
 	private int x;
 	private int y;

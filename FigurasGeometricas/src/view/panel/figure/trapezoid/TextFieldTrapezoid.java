@@ -4,9 +4,9 @@ public enum TextFieldTrapezoid {
 
 	MAJOR_BASE(0, 110, 10, 60, 25),
 	MINOR_BASE(1, 110, 45, 60, 25),
-	SIDE1(2, 280, 10, 60, 25),
-	SIDE2(3, 280, 45, 60, 25),
-	HEIGHT(4, 110, 80, 60, 25);
+	SIDE1     (2, 280, 10, 60, 25),
+	SIDE2     (3, 280, 45, 60, 25),
+	HEIGHT    (4, 110, 80, 60, 25);
 	
 	private int index;
 	private int x;

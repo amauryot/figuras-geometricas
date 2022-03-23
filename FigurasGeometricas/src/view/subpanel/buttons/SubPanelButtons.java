@@ -14,10 +14,11 @@ public class SubPanelButtons extends JPanel {
 	private final int GRID_ROWS = 1;
 	private final int GRID_COLS = 3;
 	private final int GRID_HGAP = 20;
-	private final int GRID_VGAP= 0;
-	private final int SUBPANEL_X = 30;
-	private final int SUBPANEL_Y = 465;
-	private final int SUBPANEL_WIDTH = 310;
+	private final int GRID_VGAP = 0;
+	
+	private final int SUBPANEL_X      = 30;
+	private final int SUBPANEL_Y      = 465;
+	private final int SUBPANEL_WIDTH  = 310;
 	private final int SUBPANEL_HEIGHT = 30;
 	
 	private ArrayList<JButton> buttonList;

@@ -4,7 +4,7 @@ public enum TextFieldRhombus {
 
 	MAJOR_DIAGONAL(0, 140, 20, 60, 25),
 	MINOR_DIAGONAL(1, 140, 70, 60, 25),
-	SIDE(2, 280, 20, 60, 25);
+	SIDE          (2, 280, 20, 60, 25);
 	
 	private int index;
 	private int x;
